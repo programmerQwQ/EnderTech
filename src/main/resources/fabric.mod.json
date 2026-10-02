@@ -1,31 +1,19 @@
 {
   "schemaVersion": 1,
-  "id": "endertech",
-  "version": "${version}",
-  "name": "EnderTech",
-  "description": "A ender technology mod.",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
-  "icon": "assets/endertech/icon.png",
+  "id": "${mod_id}",
+  "name": "${mod_name}",
+  "version": "${mod_version}",
+  "license": "${mod_license}",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "io.mikaple.endertech.client.EndertechDataGenerator"
-    ],
-    "client": [
-      "io.mikaple.endertech.client.EndertechClient"
+      "io.mikaple.endertech.EnderTechDataGenerator"
     ],
     "main": [
-      "io.mikaple.endertech.Endertech"
+      "io.mikaple.endertech.EnderTech"
     ]
   },
   "mixins": [
     "endertech.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": ">=${loader_version}",
-    "fabric-api": "*",
-    "minecraft": "${minecraft_version}"
-  }
+  ]
 }
